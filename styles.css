@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero{
+    width: 100%;
+    min-height: 100svh;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.back-video{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    width: 80px;
+}
+
+nav ul li{
+   list-style:none;
+   display: inline-block;
+    margin-left: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
+
+.content {
+    text-align: center;
+    color: #fff;
+}
+
+.content h1{
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(48px, 12vw, 120px);
+    font-weight: 100;
+    line-height: 1.1;
+}
+
+.content p {
+    font-size: clamp(14px, 4vw, 18px);
+    letter-spacing: 2px;
+}
+
+.content h1:hover{
+-webkit-text-stroke: 2px #fff;
+color: transparent;
+transition: 0.5s;
+}
+
+.content-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    margin:0,10,0,10;
+}
+
+.content-footer-left,
+.content-footer-right {    
+    /* color: #fff; 
+    font-size: 18px; */
+    margin: 0 10px;
+}
+
+.count-down-timer{
+    /* margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 25px;
+    padding: 0 10px;         /* Side breathing room for 360px screens */
+    box-sizing: border-box;
+    gap: 8px;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.time-number {
+    font-size: clamp(28px, 8vw, 48px);
+    color: #fff;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.time-label {
+    font-size: clamp(12px, 3vw, 18px);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+} 
+    /* color: #fff;
+    margin: 15px 5px;       
+    text-align: center;
+    flex: 1;
+} */
+
+.count-down-timer .countdown{
+    display: inline-block;
+    font-size: 28px;
+    color: #fff;
+    margin: 0 10px;
+}
+
+.our-story{
+    width: 100%;
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #F3ECDC;
+    
+}
+
+.our-story h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(50px, 8vw, 80px);
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.our-story h1.show {
+  opacity: 1;
+}
+
+.our-story-background{
+    background-color: #FFFDF8;
+    max-width: 95%;
+    height: 750px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 1;
+}
+
+.our-story-background::before {
+    display: none;
+}
+
+/* Our container */
+.our-story-content {
+    display: flex;
+    gap: 50px;
+    align-items: center; /* Vertically centers text and image */
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+/* LEFT: text column */
+.our-story-content-left {
+    flex: 1; 
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left;
+    color: #333;
+}
+
+/* RIGHT: image column */
+.our-story-content-right {
+    flex: 1;              /* fill remaining space */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+}
+
+.our-story-content-right img {
+    width:100%;
+    max-width: 550px;
+    height: auto; /* Changed from 650px to auto to prevent stretching */
+    aspect-ratio: 4 / 3; /* Matches the rectangular feel of the photo */
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* When revealed */
+.our-story-content-left.show {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+.our-story-content-right.show {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.5s;
+}
+.venue{
+    width: 100%;
+    padding: 50px 100px;
+    text-align: center;
+    background-color: #FFFDF8;
+}
+
+.venue h1{
+    width: 100%;
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 20px;
+    font-weight: lighter;
+    color: black
+}
+.rsvp{
+    width: 100%;
+    padding: 50px 100px;
+    text-align: center;
+    background-color: #5FA8A3;
+}
+
+.rsvp h1{
+    width: 100%;
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: lighter;
+    color: #fff;
+}
+
+.rsvp img{
+    width: 250px;
+    height: 150px;
+    margin-top: 20px;
+}
+.rsvp img:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video video{
+        width: 100%;
+        height: auto;
+    }
+
+}
+@media (max-aspect-ratio: 16/9) {
+    .back-video video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .our-story-background {
+        padding: 40px 20px;
+        width: 95%;
+    }
+
+    .our-story-content {
+        flex-direction: column; 
+        gap: 30px;
+    }
+
+    .our-story-content-left {
+        text-align: center; 
+        margin: 0;
+    }
+    
+    .our-story-content-right {
+        margin: 0;             
+        width: 100%;
+    }
+
+    .our-story-content-right img {
+        width: 100%;
+        height: 200px;;   
+        max-width: 100%;
+    }
+}
+
+.slideshow {
+  max-width: 900px;
+  margin: 30px auto;
+  position: relative;
+}
+
+.mySlides {
+  width: 100%;
+  display: none;
+  border-radius: 12px;
+}
+
+.slideshow-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background-color: #5FA8A3;
+}
+
+.map{
+  max-width: 900px;
+  margin: 30px auto;
+  position: relative;
+}
+.map-responsive {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (max-width: 768px) {
+
+    nav ul {
+        display: none; /* temporary — replace with hamburger later */
+    }
+
+    .venue,
+    .rsvp {
+        padding: 40px 20px;
+    }
+
+    .venue h1 {
+        font-size: clamp(40px, 10vw, 70px);
+    }
+
+    .rsvp h1 {
+        font-size: clamp(36px, 9vw, 60px);
+    }
+
+    .our-story-content {
+        gap: 24px;
+    }
+
+    .our-story-content-left {
+        padding: 20px;
+        order: 1; /* Text first */
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .our-story-content-right img {
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        width: 100%;
+        order: 2; /* Image second */
+    }
+}
+
+@media (max-width: 600px) {
+    .count-down-timer {
+        gap: 12px;
+        margin: 0 20px;
+    }
+
+    .time-number {
+        font-size: clamp(24px, 6vw, 36px);
+    }
+
+    .time-label {
+        font-size: clamp(10px, 2.5vw, 14px);
+    }
+}
+
+@media (max-width: 600px) {
+    .count-down-timer {
+        padding: 0 15px;    /* Slightly tighter padding for very small screens */
+        gap: 20px;           /* Small gap between the boxes */
+    }
+
+    .count-down-timer .time {
+        font-size: 13px;    /* Adjust this to fit your preference */
+        margin: 5px 0;      /* Remove side margins as gap handles it now */
+        line-height: 1.2;
+    }
+}
+
+.count-down-timer .time {
+    flex: 1;                 /* Each box grows/shrinks equally */
+    display: flex;
+    flex-direction: column;  /* Stack Number on top of Label */
+    align-items: center;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1); /* Optional: slight glass effect */
+    padding: 10px 0;
+    border-radius: 8px;
+    
+    /* Number Size: Scales between 24px and 40px based on screen width */
+    font-size: clamp(24px, 6vw, 40px); 
+    font-weight: 600;
+    line-height: 1;
+}
+
+.count-down-timer .time span {
+    display: block;
+    /* Label Size: Scales between 9px and 12px */
+    font-size: clamp(9px, 2.5vw, 12px);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+@media (max-width: 375px) {
+    .count-down-timer {
+        gap: 5px; /* Tighten gap so nothing overflows */
+    }
+    .count-down-timer .time {
+        padding: 8px 0;
+    }
+}
+
+/* For Mid to Large Phones (390px - 414px) */
+@media (min-width: 390px) and (max-width: 430px) {
+    .count-down-timer {
+        padding: 0 15px;
+        gap: 12px;
+    }
+}
