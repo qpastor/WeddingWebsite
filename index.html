@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Rhenz & Zairene Wedding" />
     <meta property="og:description" content="Join us in celebrating our love and commitment." />
-    <meta property="og:image" content="https://rhenz-zairene-wedding.netlify.app/images/Thumbnail.jpg" />
+    <meta property="og:image" content="https://wedding-website-one-tau.vercel.app/images/Thumbnail.jpg" />
     <meta property="og:image:width" content="960" />
     <meta property="og:image:height" content="960" />
-    <meta property="og:url" content="https://rhenz-zairene-wedding.netlify.app/" />
+    <meta property="og:url" content="https://wedding-website-one-tau.vercel.app/images/Thumbnail.jpg" />
     <meta property="og:site_name" content="Rhenz & Zairene Wedding" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:type" content="website" />
@@ -24,7 +24,6 @@
              playsinline 
              loop
              preload="auto"
-             poster="Rhenz-Zairene-Wedding-Thumbnail.jpg"
              class="back-video">
                 <source src="videos/6672_Beach_Sea_1920x1080.mp4" type="video/mp4">
             </video>
@@ -32,8 +31,6 @@
             <p>THE WEDDING OF</p>
             <h1>Rhenz & Zairene</h1>
         <div class="content-footer">
-            <!-- <p class="content-footer-left">May 29, 2026</p>
-            <p class="content-footer-right">San Antonio, Zambales</p> -->
         </div>
         <div class="count-down-timer">
             <!-- <h4>Countdown to Our Wedding</h4> -->
@@ -74,27 +71,61 @@
         <div class="venue-content">
         <p>Join us in Cabo de Roca Villas at San Antonio Zambales for our wedding celebration. We can't wait to share this special day with you in such a stunning location.</p>
           <div class="slideshow">
-  <img class="mySlides" src="images/Venue/1.jpg">
-  <img class="mySlides" src="images/Venue/2.jpg">
-  <img class="mySlides" src="images/Venue/3.jpg">
-  <img class="mySlides" src="images/Venue/4.jpg">
-  <img class="mySlides" src="images/Venue/5.jpg">
+            <img class="mySlides" src="images/Venue/1.jpg">
+            <img class="mySlides" src="images/Venue/2.jpg">
+            <img class="mySlides" src="images/Venue/3.jpg">
+            <img class="mySlides" src="images/Venue/4.jpg">
+            <img class="mySlides" src="images/Venue/5.jpg">
 
-  <div class="slideshow-dots">
-    <span class="dot" onclick="currentDiv(1)"></span>
-    <span class="dot" onclick="currentDiv(2)"></span>
-    <span class="dot" onclick="currentDiv(3)"></span>
-    <span class="dot" onclick="currentDiv(4)"></span>
-    <span class="dot" onclick="currentDiv(5)"></span>
-  </div>
-</div>
+          <div class="slideshow-dots">
+          <span class="dot" onclick="currentDiv(1)"></span>
+          <span class="dot" onclick="currentDiv(2)"></span>
+          <span class="dot" onclick="currentDiv(3)"></span>
+          <span class="dot" onclick="currentDiv(4)"></span>
+          <span class="dot" onclick="currentDiv(5)"></span>          
+          </div>
+          </div>
 <div class="map">
 <p>You can find us at Cabo de Roca Villas in San Antonio Zambales.</p>
 <div class="map-responsive">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.615202437671!2d120.06012265217608!3d14.924601298268323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3395d10be295979d%3A0x343d32c658b7b76b!2sCabo%20de%20Roca%20villas!5e0!3m2!1sen!2sph!4v1770216498293!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </div>
+<div class="attire">
+            <h1>Wedding Attires</h1>
+            <p>For our wedding, we kindly request that guests adhere to a beach formal dress code. This means elegant yet comfortable attire suitable for a beach setting.</p>              
+            <!-- Trigger the Modal -->
+            <img id="myImg" src="images/Attires/WeddingAttires.jpg" alt="Wedding Attires" style="width:100%;max-width:960px;height:960px">
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
 </div>
+            <!-- <div class="slideshow-attire">
+            <img class="attireSlides" width="820px" height="950px" src="images/Attires/WeddingAttires.jpg">
+            <img class="attireSlides" width="960px" height="960px" src="images/Attires/2.jpg">
+            <img class="attireSlides" width="960px" height="960px" src="images/Attires/3.jpg">
+            <img class="attireSlides" width="960px" height="960px" src="images/Attires/4.jpg">
+            <img class="attireSlides" width="960px" height="960px" src="images/Attires/5.jpg">
+
+          <div class="slideshow-attire-dots">
+          <span class="attire-dot" onclick="currentDiv(1)"></span>
+          <span class="attire-dot" onclick="currentDiv(2)"></span>
+          <span class="attire-dot" onclick="currentDiv(3)"></span>
+          <span class="attire-dot" onclick="currentDiv(4)"></span>
+          <span class="attire-dot" onclick="currentDiv(5)"></span>          
+          </div>
+          </div> -->
+            </div>
+
     </div>
     </div>
     <div class="rsvp">
@@ -129,6 +160,27 @@ function showDivs() {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
   setTimeout(showDivs.bind(null, slideIndex + 1), 1500);
+}
+
+function showAttireDivs() {
+  let i;
+  let slides = document.getElementsByClassName("attireSlides");
+  let dots = document.getElementsByClassName("attire-dot");
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  setTimeout(showAttireDivs.bind(null, slideIndex + 1), 1500);
 }
 
 function countdownTimer() {
@@ -175,6 +227,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   observer.observe(storySection);
 });
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
 </script>
 </body>
 </html>
