@@ -132,75 +132,32 @@
       
     <div class="accommodation">
     <h1>Are there other accommodation near the venue?</h1>
+    <div class="accommodation-details">
     <p>Yes, there are several other accommodations near Cabo de Roca Villas in San Antonio Zambales.</p>
-    <ul>
-      <li>The Palms Village</li>
-      <li>Whitehouse Fiber</li>
-      <li>Casa David</li>
-      <li>Accommodation 4</li>
-    </ul>
+    <p style="font-weight: bold; font-size: 24px;"> Click the name to view their facebook page</p>
+    </div>
+    <div class="accommodation-list">
+      <ol>
+      <li><a href="https://www.facebook.com/profile.php?id=61555738719055" target="_blank">Merbu Events and Villas</a></li>
+      <li><a href="https://www.facebook.com/villajanella" target="_blank">Villa Janella Residences and Beach Resort</a></li>
+      <li><a href="https://www.facebook.com/Seaesta2023" target="_blank">Seaesta Beach House</a></li>
+      <li><a href="https://www.facebook.com/mortelsriverpoolresort" target="_blank">Mortel Riverpool Resort</a></li>
+      <li><a href="https://www.facebook.com/TheSandsAtSanAntonio" target="_blank">The Sands at San Antonio</a></li>
+      <li><a href="https://www.facebook.com/wavesong2014" target="_blank">Wave Song Resort</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=100063629633426" target="_blank">Caneo Beach Resort</a></li>
+      <li><a href="https://www.facebook.com/casabella.pundaquit" target="_blank">Casa Bella</a></li>
+      <li><a href="https://www.facebook.com/costasambali" target="_blank">Costa Sambali</a></li>
+      </ol>
+    </div>
     </div>  
     
     <div class="faq">
-        <h1>FAQ</h1>
-            <!-- <p>Please let us know if you will be able to join us on our special day by clicking the RSVP button above.</p> -->
-            <!-- <a href="https://forms.gle/p5M16Ppd8oFax4gb7" target="_blank"><img src="images/RSVP.png" alt="RSVP" class="rsvp-image"></a> -->
-       <ul>
-      <li>Question 1</li>
-      <li>Question 2</li>
-      <li>Question 3</li>
-      <li>Question 4</li>
-    </ul>   
+      <div class="faq-header">
+        <h1>Frequently Asked Questions</h1>
+      </div>
+        
+        <div class="faq-container">
           </div>
-
-<script>
-let slideIndex = 0;
-countdownTimer()
-setInterval(countdownTimer, 1000);
-showDivs();
-
-
-function showDivs() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  setTimeout(showDivs.bind(null, slideIndex + 1), 1500);
-}
-
-function countdownTimer() {
-    const weddingDate = new Date("May 29, 2026 00:00:00").getTime();
-    const now = new Date().getTime();
-    const timeLeft = weddingDate - now;
-
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-    document.getElementById("days").innerText = String(days).padStart(2, '0');
-    document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-    document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-    document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
-    //
-
-    //document.getElementById("countdown").innerText = String(days).padStart(2, '0') + " Days " + String(hours).padStart(2, '0') + " Hours " + String(minutes).padStart(2, '0') + " Minutes " + String(seconds).padStart(2, '0') + " Seconds";
- 
-}
-
-</script>
+<script src="main.js"></script>
 </body>
 </html>
