@@ -11,17 +11,64 @@
     <div class="gallery-header">
         <h1>Our Photo Gallery</h1>
     </div>
+    <div class="photo-in-view">
+    <img src="images/DASOL TEASER/UNDERWATER 2.jpg" alt="Photo Gallery Thumbnail" style="width: 425px; height: 425px;">
+    </div>
     <div class="photo-grid">
-    <img src="images/Attires/1.jpg" alt="Photo Gallery Thumbnail">
-    <img src="images/Attires/2.jpg" alt="Photo Gallery Thumbnail">
-    <img src="images/Attires/3.jpg" alt="Photo Gallery Thumbnail">
-    <img src="images/Attires/4.jpg" alt="Photo Gallery Thumbnail">
-    <img src="images/Attires/5.jpg" alt="Photo Gallery Thumbnail">
-    <img src="images/Attires/6.jpg" alt="Photo Gallery Thumbnail">    
+    <img src="images/DASOL TEASER/UNDERWATER 2.jpg" id="1" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/UNDERWATER 1.jpg" id="2" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO05702.jpg" id="3" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO05680.jpg" id="4" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO05669.jpg" id="5" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO05568.jpg" id="6" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO05551.jpg" id="7" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO05543.jpg" id="8" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO05427.jpg" id="9" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO05350.jpg" id="10" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO05311.jpg" id="11" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO04976.jpg" id="12" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO04874.jpg" id="13" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO04853.jpg" id="14" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO04631.jpg" id="15" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO04522.jpg" id="16" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO04514.jpg" id="17" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO04508.jpg" id="18" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO04478.jpg" id="19" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO04472.jpg" id="20" alt="Photo Gallery Thumbnail">
+    <img src="images/DASOL TEASER/PAO04443.jpg" id="21" alt="Photo Gallery Thumbnail">
     </div>
     <br />
-    <a href="index.html"> 
+    <!-- navigate to the gallery section on the home page -->
+    <a href="index.html#gallery"> 
     <button class="back-button"> Go Back to Home</button>
     </a>
+
+<script>
+    function openPhotoGallery() {
+  const photoInViewContainer = document.querySelector(".photo-in-view");
+  const photoInViewImg = photoInViewContainer ? photoInViewContainer.querySelector("img") : null;
+  const grid = document.querySelector(".photo-grid");
+
+  if (!grid || !photoInViewImg) {
+    // nothing to do if structure is missing
+    return;
+  }
+
+  // delegate clicks on the grid to update the large view
+  grid.addEventListener("click", (event) => {
+    const target = event.target;
+    if (target && target.tagName === "IMG") {
+      // swap the src of the main image so the clicked thumbnail becomes the full view
+      photoInViewImg.src = target.src;
+      photoInViewImg.alt = target.alt || "Photo in view";
+    }
+  });
+}
+
+// initialize gallery behaviour once the DOM is ready
+document.addEventListener("DOMContentLoaded", () => {
+  openPhotoGallery();
+});
+</script>    
 </body>
 </html>

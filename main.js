@@ -85,6 +85,7 @@ setInterval(countdownTimer, 1000);
 showDivs();
 
 
+
 function showDivs() {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -125,3 +126,30 @@ function countdownTimer() {
     //document.getElementById("countdown").innerText = String(days).padStart(2, '0') + " Days " + String(hours).padStart(2, '0') + " Hours " + String(minutes).padStart(2, '0') + " Minutes " + String(seconds).padStart(2, '0') + " Seconds";
  
 }
+
+
+function openPhotoGallery() {
+  const photoInViewContainer = document.querySelector(".photo-in-view");
+  const photoInViewImg = photoInViewContainer ? photoInViewContainer.querySelector("img") : null;
+  const grid = document.querySelector(".photo-grid");
+
+  if (!grid || !photoInViewImg) {
+    // nothing to do if structure is missing
+    return;
+  }
+
+  // delegate clicks on the grid to update the large view
+  grid.addEventListener("click", (event) => {
+    const target = event.target;
+    if (target && target.tagName === "IMG") {
+      // swap the src of the main image so the clicked thumbnail becomes the full view
+      photoInViewImg.src = target.src;
+      photoInViewImg.alt = target.alt || "Photo in view";
+    }
+  });
+}
+
+// initialize gallery behaviour once the DOM is ready
+document.addEventListener("DOMContentLoaded", () => {
+  openPhotoGallery();
+});
