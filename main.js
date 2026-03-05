@@ -80,8 +80,10 @@ displayFAQ();
 
 
 let slideIndex = 0;
+let photoSlideIndex = 0;
 countdownTimer()
 setInterval(countdownTimer, 1000);
+showPhotoGallery();
 showDivs();
 
 
@@ -107,6 +109,28 @@ function showDivs() {
   setTimeout(showDivs.bind(null, slideIndex + 1), 1500);
 }
 
+
+function showPhotoGallery() {
+  let i;
+  let photoslides = document.getElementsByClassName("photoSlides");
+  let photodots = document.getElementsByClassName("photoDot");
+
+  for (i = 0; i < photoslides.length; i++) {
+    photoslides[i].style.display = "none";
+  }
+  photoSlideIndex++;
+  if (photoSlideIndex > photoslides.length) {
+    photoSlideIndex = 1;
+  }
+  for (i = 0; i < photodots.length; i++) {
+    photodots[i].className = photodots[i].className.replace(" active", "");
+  }
+
+  photoslides[photoSlideIndex - 1].style.display = "block";
+  photodots[photoSlideIndex - 1].className += " active";
+  setTimeout(showPhotoGallery.bind(null, photoSlideIndex + 1), 1500);
+}
+
 function countdownTimer() {
     const weddingDate = new Date("May 29, 2026 00:00:00").getTime();
     const now = new Date().getTime();
@@ -126,30 +150,3 @@ function countdownTimer() {
     //document.getElementById("countdown").innerText = String(days).padStart(2, '0') + " Days " + String(hours).padStart(2, '0') + " Hours " + String(minutes).padStart(2, '0') + " Minutes " + String(seconds).padStart(2, '0') + " Seconds";
  
 }
-
-
-function openPhotoGallery() {
-  const photoInViewContainer = document.querySelector(".photo-in-view");
-  const photoInViewImg = photoInViewContainer ? photoInViewContainer.querySelector("img") : null;
-  const grid = document.querySelector(".photo-grid");
-
-  if (!grid || !photoInViewImg) {
-    // nothing to do if structure is missing
-    return;
-  }
-
-  // delegate clicks on the grid to update the large view
-  grid.addEventListener("click", (event) => {
-    const target = event.target;
-    if (target && target.tagName === "IMG") {
-      // swap the src of the main image so the clicked thumbnail becomes the full view
-      photoInViewImg.src = target.src;
-      photoInViewImg.alt = target.alt || "Photo in view";
-    }
-  });
-}
-
-// initialize gallery behaviour once the DOM is ready
-document.addEventListener("DOMContentLoaded", () => {
-  openPhotoGallery();
-});

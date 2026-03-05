@@ -355,6 +355,46 @@ transition: 0.5s;
   background-color: #5FA8A3;
 }
 
+
+.photoslideshow {
+  max-width: 750px;
+  margin: 30px auto;
+  position: relative;
+  padding: 20px;
+}
+
+.photoslideshow img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.photoSlides {
+  width: 100%;
+  display: none;
+  border-radius: 12px;
+}
+
+.photoslideshow-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.photoDot {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.photoDot.active {
+  background-color: #5FA8A3;
+}
+
 /* .map{
   max-width: 900px;
   margin: 30px auto;
@@ -799,6 +839,11 @@ transform: scale(1.1);
 
 .accommodation-list li{
     margin: 10px 0;
+    background-color: #F3ECDC;
+    /* background-color: #E8E4C9; */
+    padding: 5px 10px; /* add some spacing inside the item */
+    border-radius: 15px; /* optional rounded corners */
+    list-style-type: none;
 }
 
 .accommodation-list a{
@@ -820,5 +865,35 @@ transform: scale(1.1);
     font-weight: 100;
     line-height: 1.1;
 }
+.photoslideshow {
+  max-width: 750px;
+  margin: 30px auto;
+  position: relative;
+}
 
+.photoSlides {
+  width: 100%;
+  display: none;
+  border-radius: 12px;
+}
+
+.photoslideshow-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.photoDot {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.photoDot.active {
+  background-color: #5FA8A3;
+}
 }
