@@ -471,22 +471,48 @@ opacity: 0.5;
     font-weight: 100;
     line-height: 1.1;
 }
+
+.accommodation-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 20px;
+    font-size: 22px;
+}
+
+.accommodation-list ol{
+    text-align: left;     /* aligns numbers and text to the left */
+    display: inline-block; /* keeps the list centered */
+}
+
+.accommodation-list li{
+    margin: 10px 0;
+    background-color: #F3ECDC;
+    /* background-color: #E8E4C9; */
+    padding: 5px 10px; /* add some spacing inside the item */
+    border-radius: 15px; /* optional rounded corners */
+    list-style-type: none;
+}
+
+.accommodation-list a{
+    text-decoration: none;
+    color: black;
+    font-size: 28px;
+    font-style: italic;
+}
 .faq{
     text-align: center;
     background-color: #5FA8A3;
     color: white;
-}
-  .faq h1{
-    
-    font-family: 'Great Vibes', cursive;
-    font-size: clamp(48px, 12vw, 120px);
-    font-weight: 100;
-    line-height: 1.1;
+    padding-top: 20px; /* add spacing here instead */
 }
 
-h2.faq-heading{
+.faq-header h1{
+    margin-top: 20px;
     font-family: 'Great Vibes', cursive;
-    font-size: clamp(48px, 12vw, 120px);
+    font-size: clamp(32px, 12vw, 120px);
     font-weight: 100;
     line-height: 1.1;
 }

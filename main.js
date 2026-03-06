@@ -1,13 +1,12 @@
 const FAQData = [
     {
-        question: ["What is the purpose of this website?"],
-        answer: ["This website serves as a central hub for all wedding-related information, including the ceremony details, guest list management, and RSVP functionality.",
-            "Answer 2"
+        question: ["Am I allowed to bring plus one?"],
+        answer: ["Your invitation will be addressed to all invited guests. If your invitation includes 'and Guest,' then you are welcome to bring a plus-one! Otherwise, we are only able to accommodate those listed."
         ],
     },
     {
-        question: ["How can I contact the couple?"],
-        answer: ["This website serves as a central hub for all wedding-related information, including the ceremony details, guest list management, and RSVP functionality.",
+        question: ["Are taking pictures allowed during ceremony?"],
+        answer: ["We would love for you to be fully present with us. Our ceremony will be unplugged, so please refrain from taking photos or videos during the ceremony. We have hired a professional photographer to capture the special moments, and we will share the photos with you after the wedding! ",
         ],
     },
     {
