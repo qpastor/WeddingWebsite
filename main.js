@@ -2,8 +2,7 @@ const FAQData = [
     {
         question: ["What is the purpose of this website?"],
         answer: ["This website serves as a central hub for all wedding-related information, including the ceremony details, guest list management, and RSVP functionality.",
-            "Answer 2",
-            "Answer 3"
+            "Answer 2"
         ],
     },
     {
