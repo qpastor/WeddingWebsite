@@ -877,6 +877,13 @@ transform: scale(1.1);
   border-radius: 12px;
 }
 
+.photoslideshow img {
+  max-height: 500px;
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+}
+
 .photoslideshow-dots {
   text-align: center;
   margin-top: 15px;
