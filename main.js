@@ -11,7 +11,7 @@ const FAQData = [
     },
     {
         question: ["What will happen if I don’t RSVP/respond?"],
-        answer: ["KINDLY RSVP ON OUR WEDDING WEBSITE ON OR BEFORE MAY 10, 2026. SHOULD WE NOT HEAR FROM YOU BY THEN, WE WILL <Strong>REGRETFULLY ASSUME THAT YOU ARE UNABLE TO JOIN US</Strong>",],
+        answer: ["Kindly RSVP on our wedding wesbsite on or before May 10 2026. Should we not hear from you by then, WE WILL REGRETFULLY ASSUME THAT YOU ARE UNABLE TO JOIN US",],
     },
 ];
 

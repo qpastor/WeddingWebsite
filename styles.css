@@ -8,6 +8,20 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.snap-pic {
+    margin: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.snap-pic h1{
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(48px, 12vw, 120px);
+    font-weight: 100;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
 .photo-gallery {
     margin: 20px;
     align-items: center;
@@ -963,4 +977,8 @@ transform: scale(1.1);
   width: 100%;
   width: 330px;
   height: 575px;
+}
+
+.snap-pic{
+    
 }
