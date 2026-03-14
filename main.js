@@ -10,10 +10,8 @@ const FAQData = [
         ],
     },
     {
-        question: ["Where is the wedding taking place?"],
-        answer: ["This website serves as a central hub for all wedding-related information, including the ceremony details, guest list management, and RSVP functionality.",
-            "Answer 2",
-        ],
+        question: ["What will happen if I don’t RSVP/respond?"],
+        answer: ["KINDLY RSVP ON OUR WEDDING WEBSITE ON OR BEFORE MAY 10, 2026. SHOULD WE NOT HEAR FROM YOU BY THEN, WE WILL <Strong>REGRETFULLY ASSUME THAT YOU ARE UNABLE TO JOIN US</Strong>",],
     },
 ];
 
@@ -31,11 +29,7 @@ const FAQContainer = document.querySelector(".faq-container");
 const displayFAQ = () => {
     FAQData.forEach((q) => {
         const answerHTML = q.answer.map((a) => `<div class="answer">
-            <span class="answer-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-            </span>
+            <span class="answer-icon">✔</span>
             ${a}
           </div>`).join("");
 
