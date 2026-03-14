@@ -931,3 +931,10 @@ transform: scale(1.1);
   background-color: #5FA8A3;
 }
 }
+
+.venue-time-details img {
+  max-height: 500px;
+  width: 100%;
+  width: 330px;
+  height: 575px;
+}
