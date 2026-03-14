@@ -625,6 +625,39 @@ opacity: 0.5;
     padding: 8px 32px;
 }
 
+
+.video p{
+    margin: 10px;
+    font-size: 24px;
+}
+
+.video-background
+{
+    /* text-align: center; */
+    background-color: #F3ECDC;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 15px;
+    /* box-shadow: 0 4px 15px rgba(0,0,0,0.05); */
+    position: relative;
+    z-index: 1;
+}
+
+.video-content {
+    display: flex;
+    flex-direction: column; /* Stacks the text on top of the video */
+    align-items: center;    /* Centers items horizontally */
+    text-align: center;     /* Ensures the "Save the date" text is centered */
+}
+
+/* Optional: To make the video responsive and look better on mobile */
+.video-content video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: adds a slight curve to match your theme */
+}
+
 @media (min-aspect-ratio: 16/9) {
     .back-video video{
         width: 100%;
@@ -979,6 +1012,4 @@ transform: scale(1.1);
   height: 575px;
 }
 
-.video p{
-    margin: 10px;
-}
+
