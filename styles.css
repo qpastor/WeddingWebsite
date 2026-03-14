@@ -892,7 +892,15 @@ transform: scale(1.1);
     position: relative;
     z-index: 1;
   }
-  .gift-content{
+
+  .gift h1{
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(48px, 12vw, 120px);
+    font-weight: 100;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+  .gift-content p{
     font-style: italic;
     font-weight: 540;
     font-size: 18px;
