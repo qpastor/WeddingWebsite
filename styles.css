@@ -902,7 +902,7 @@ transform: scale(1.1);
 }
   .gift-content p{
     font-style: italic;
-    font-weight: 540;
+    /* font-weight: 540; */
     font-size: 18px;
 }
 
